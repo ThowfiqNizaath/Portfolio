@@ -16,7 +16,7 @@ const CertificateSection = () => {
 
         <div className="flex flex-nowrap gap-8  overflow-x-scroll snap-x scroll-none w-full p-2">
           {certificates.map((certificate, index) => (
-            <div className="group w-full max-w-[600px] border gradient-border flex-none md:h-90 rounded-2xl relative overflow-hidden snap-center">
+            <div key={index} className="group w-full max-w-[600px] border gradient-border flex-none md:h-90 rounded-2xl relative overflow-hidden snap-start">
               <div className="w-full md:h-full bg-black/10 z-40">
                 <img
                   src={certificate.image}
