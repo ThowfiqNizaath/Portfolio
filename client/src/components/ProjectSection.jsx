@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 const ProjectSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl border border-black">
+      <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Featured <span className="text-primary">Project</span>
         </h2>
@@ -16,50 +16,54 @@ const ProjectSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-nowrap gap-8 p-5 overflow-x-scroll snap-x scroll-none">
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden max-w-[500px] w-full shadow-xs card-hover"
+              className="group bg-card rounded-lg overflow-hidden shrink-0 max-w-[700px] w-full shadow-xs card-hover snap-end md:snap-center"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="group aspect-video overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:opacity-0 z-40 "
                 />
-              </div>
+                {/* </div> */}
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-gray-500/20 text-muted-foreground">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                <div className="group-hover:opacity-100 opacity-0 absolute p-6 inset-0 z-50 flex flex-col justify-around">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span className="text-xs px-2 py-1 md:px-5 md:py-2 md:text-sm font-medium border rounded-full bg-gray-500/20 text-muted-foreground">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center space-x-3">
-                    <a
-                      target="_blank"
-                      href={project.demoUrl}
-                      size={20}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      size={20}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <FaGithub />
-                    </a>
+                  <div className="my-2">
+                    <h3 className="text-xl md:text-2xl font-semibold mb-2">{project.title}</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-4">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="">
+                    <div className="flex items-center gap-10 justify-center">
+                      <a
+                        title="Open Live Link"
+                        target="_blank"
+                        href={project.demoUrl}
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300 text-2xl"
+                      >
+                        <ExternalLink />
+                      </a>
+                      <a
+                        href={project.githubUrl}
+                        title="Sorce Code"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300 text-2xl"
+                      >
+                        <FaGithub />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
