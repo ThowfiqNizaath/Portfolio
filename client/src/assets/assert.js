@@ -164,6 +164,36 @@ export const projects = [
     demoUrl: "https://book-my-show-delta-one.vercel.app/",
     githubUrl: "#",
   },
+  {
+    id: 4,
+    title: "Project Title 3",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium non modi error voluptate voluptatibus libero repellat vel, laudantium iusto.",
+    image: "/projects/image.png",
+    tags: ["TypeScript", "D3.js", "Next.js"],
+    demoUrl: "https://book-my-show-delta-one.vercel.app/",
+    githubUrl: "#",
+  },
+  {
+    id: 5,
+    title: "Project Title 3",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium non modi error voluptate voluptatibus libero repellat vel, laudantium iusto.",
+    image: "/projects/image.png",
+    tags: ["TypeScript", "D3.js", "Next.js"],
+    demoUrl: "https://book-my-show-delta-one.vercel.app/",
+    githubUrl: "#",
+  },
+  {
+    id: 6,
+    title: "Project Title 3",
+    description:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium non modi error voluptate voluptatibus libero repellat vel, laudantium iusto.",
+    image: "/projects/image.png",
+    tags: ["TypeScript", "D3.js", "Next.js"],
+    demoUrl: "https://book-my-show-delta-one.vercel.app/",
+    githubUrl: "#",
+  },
 ];
 
 

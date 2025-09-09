@@ -14,25 +14,21 @@ const SkillsSection = () => {
         selectedCategorySkills()
     },[category])
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secendary/30">
+    <section id="skills" className="py-24 px-1 relative bg-secendary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary">Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((cat, index) => (
-            <button
-              key={index}
-              onClick={() => setCategory(cat)}
-              className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
-                category === cat ? "bg-primary text-lg text-primary-foreground": "opacity-80"
-              )}
-            >
-              {cat.toUpperCase()}
-            </button>
-          ))}
+        <div className="border border-primary mb-12 bg-primary/80">
+          <select
+            className="block ring-0 py-2 px-4 border-none w-full text-white"
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            {categories.map((cat, index) => (
+              <option className='text-black' value={cat}>{cat.toUpperCase()}</option>
+            ))}
+          </select>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -3,14 +3,14 @@ import React from 'react'
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-4 relative">
+    <section id="about" className="py-24 px-1 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           About <span className="text-primary">Me</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-6 border border-primary/80 p-5 text-justify shadow-sm shadow-primary">
+          <div className="space-y-6 border border-primary/80 p-5 shadow-sm shadow-primary">
             <h3 className="text-2xl text-center font-semibold">
               Passionate Full Stack Developer
             </h3>
@@ -26,7 +26,7 @@ const AboutSection = () => {
               with clean, efficient code.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href="#contact" className="cosmic-button">
                 Get In Touch
               </a>
