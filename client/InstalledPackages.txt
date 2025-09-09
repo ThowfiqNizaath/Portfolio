@@ -1,0 +1,11 @@
+ npm installed packages
+ @radix-ui/react-toast,
+ tailwind-merge,
+ lucide react,
+ class-variance-authority,
+ clsx
+
+
+ Note to Remember
+ @theme => index.css 
+ @layer base => index.css
