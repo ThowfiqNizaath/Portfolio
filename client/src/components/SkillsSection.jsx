@@ -14,7 +14,10 @@ const SkillsSection = () => {
         selectedCategorySkills()
     },[category])
   return (
-    <section id="skills" className="py-24 px-1 relative bg-secendary/30">
+    <section
+      id="skills"
+      className="py-24 px-1 relative bg-secendary/30 snap-center"
+    >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary">Skills</span>
@@ -26,7 +29,9 @@ const SkillsSection = () => {
             onChange={(e) => setCategory(e.target.value)}
           >
             {categories.map((cat, index) => (
-              <option className='text-black' value={cat}>{cat.toUpperCase()}</option>
+              <option key={index} className="text-black" value={cat}>
+                {cat.toUpperCase()}
+              </option>
             ))}
           </select>
         </div>

@@ -14,7 +14,7 @@ const Home = () => {
     <div className='min-h-screen bg-background text-foreground overflow-x-hidden'>
      <StarBackground />
      <Navbar /> 
-     <main id="home">
+     <main id="home" className="snap-mandatory">
       <HeroSection />
       <AboutSection />
       <SkillsSection />

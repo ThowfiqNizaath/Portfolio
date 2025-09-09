@@ -5,7 +5,10 @@ import { FaGithub } from "react-icons/fa";
 
 const ProjectSection = () => {
   return (
-    <section id="projects" className="py-24 px-1 border-black relative">
+    <section
+      id="projects"
+      className="py-24 px-1 border-black relative snap-center"
+    >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Featured <span className="text-primary">Project</span>
@@ -18,7 +21,10 @@ const ProjectSection = () => {
 
         <div className="flex flex-nowrap gap-8  overflow-x-scroll snap-x scroll-none w-full p-2">
           {projects.map((project, key) => (
-            <div className="group w-full max-w-[600px] border gradient-border flex-none md:h-90 rounded-2xl relative overflow-hidden snap-center">
+            <div
+              key={key}
+              className="group w-full max-w-[600px] border gradient-border flex-none md:h-90 rounded-2xl relative overflow-hidden snap-center"
+            >
               <div className="w-full md:h-full bg-black/10 z-40">
                 <img
                   src={project.image}
@@ -29,14 +35,17 @@ const ProjectSection = () => {
               {/* Mobile */}
               <div className="md:hidden flex flex-col justify-around gap-3 py-3 px-2 overflow-hidden">
                 <div className="flex flex-wrap gap-5">
-                  {project.tags.map((tag) => (
-                    <p className="px-4 py-2 rounded-full border border-foreground text-xs">
+                  {project.tags.map((tag, index) => (
+                    <p
+                      key={index}
+                      className="px-4 py-2 rounded-full border border-foreground text-xs"
+                    >
                       {tag}
                     </p>
                   ))}
                 </div>
                 <div className="my-2">
-                  <h3 className= "text-2xl font-semibold mb-2">
+                  <h3 className="text-2xl font-semibold mb-2">
                     {project.title}
                   </h3>
                   <p className="text-xs">{project.description}</p>
@@ -65,8 +74,11 @@ const ProjectSection = () => {
               {/* Desktop */}
               <div className="absolute p-5 flex flex-col justify-around gradient-border md:group-hover:inset-0 border-none transition-all duration-700 ">
                 <div className="flex gap-5">
-                  {project.tags.map((tag) => (
-                    <p className="px-4 py-2 rounded-full border border-foreground backdrop-blur-2xl">
+                  {project.tags.map((tag, index) => (
+                    <p
+                      key={index}
+                      className="px-4 py-2 rounded-full border border-foreground backdrop-blur-2xl"
+                    >
                       {tag}
                     </p>
                   ))}

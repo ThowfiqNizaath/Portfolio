@@ -3,7 +3,7 @@ import { certificates, projects } from '../assets/assert';
 
 const CertificateSection = () => {
   return (
-    <div id="certificates" className="py-24 px-1 relative">
+    <div id="certificates" className="py-24 px-1 relative snap-center">
       <div className="container max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Certificates & <span className="text-primary">Achievements</span>
@@ -16,7 +16,10 @@ const CertificateSection = () => {
 
         <div className="flex flex-nowrap gap-8  overflow-x-scroll snap-x scroll-none w-full p-2">
           {certificates.map((certificate, index) => (
-            <div key={index} className="group w-full max-w-[600px] border gradient-border flex-none md:h-90 rounded-2xl relative overflow-hidden snap-start">
+            <div
+              key={index}
+              className="group w-full max-w-[600px] border gradient-border flex-none md:h-90 rounded-2xl relative overflow-hidden snap-start"
+            >
               <div className="w-full md:h-full bg-black/10 z-40">
                 <img
                   src={certificate.image}
@@ -79,7 +82,11 @@ const CertificateSection = () => {
                 </div>
                 <p className="my-5 text-sm">{certificate.description}</p>
 
-                <a herf="#" target="_blank" className="cosmic-button mt-5 cursor-pointer">
+                <a
+                  herf="#"
+                  target="_blank"
+                  className="cosmic-button mt-5 cursor-pointer"
+                >
                   View Certificate
                 </a>
               </div>
