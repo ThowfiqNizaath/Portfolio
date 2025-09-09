@@ -22,7 +22,7 @@ const ProjectSection = () => {
               <div className="w-full md:h-full bg-black/10 z-40">
                 <img
                   src={project.image}
-                  className="w-full h-full object-cover object-center group-hover:blur-2xl transition-all duration-300"
+                  className="w-full h-auto md:h-full object-cover object-center transition-all duration-300"
                 />
               </div>
 
@@ -30,7 +30,7 @@ const ProjectSection = () => {
               <div className="md:hidden flex flex-col justify-around gap-3 py-3 px-2 overflow-hidden">
                 <div className="flex flex-wrap gap-5">
                   {project.tags.map((tag) => (
-                    <p className="px-4 py-2 rounded-full border border-foreground">
+                    <p className="px-4 py-2 rounded-full border border-foreground text-xs">
                       {tag}
                     </p>
                   ))}
@@ -39,7 +39,7 @@ const ProjectSection = () => {
                   <h3 className= "text-2xl font-semibold mb-2">
                     {project.title}
                   </h3>
-                  <p className="">{project.description}</p>
+                  <p className="text-xs">{project.description}</p>
                 </div>
 
                 <div className="flex gap-5 justify-center ">
@@ -63,7 +63,7 @@ const ProjectSection = () => {
               </div>
 
               {/* Desktop */}
-              <div className="absolute p-5 flex flex-col justify-around gradient-border group-hover:inset-0 transition-all duration-700 max-md:bg-foreground/80">
+              <div className="absolute p-5 flex flex-col justify-around gradient-border md:group-hover:inset-0 border-none transition-all duration-700 ">
                 <div className="flex gap-5">
                   {project.tags.map((tag) => (
                     <p className="px-4 py-2 rounded-full border border-foreground backdrop-blur-2xl">

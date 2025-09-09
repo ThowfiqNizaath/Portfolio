@@ -197,6 +197,65 @@ export const projects = [
 ];
 
 
+export const certificates = [
+  {
+    id: 1,
+    title: "Programming with Java",
+    platform: "Coursera",
+    type: "course",
+    image: "/projects/image.png",
+    by: "Meta",
+    description:
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe assumenda necessitatibus quaerat numquam facere sit dolorem, soluta eius suscipit ad.",
+    link: "/projects/image.png",
+  },
+  {
+    id: 2,
+    title: "Programming with Java",
+    platform: "Coursera",
+    type: "course",
+    image: "/projects/image.png",
+    by: "Meta",
+    description:
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe assumenda necessitatibus quaerat numquam facere sit dolorem, soluta eius suscipit ad.",
+    link: "/projects/image.png",
+  },
+  {
+    id: 3,
+    title: "Programming with Java",
+    platform: "Coursera",
+    type: "course",
+    by: "Meta",
+    image: "/projects/image.png",
+    description:
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe assumenda necessitatibus quaerat numquam facere sit dolorem, soluta eius suscipit ad.",
+    link: "/projects/image.png",
+  },
+  {
+    id: 4,
+    title: "Programming with Java",
+    platform: "Coursera",
+    type: "course",
+    by: "Meta",
+    image: "/projects/image.png",
+    description:
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe assumenda necessitatibus quaerat numquam facere sit dolorem, soluta eius suscipit ad.",
+    link: "/projects/image.png",
+  },
+  {
+    id: 5,
+    title: "Programming with Java",
+    platform: "Coursera",
+    type: "course",
+    by: "Meta",
+    image: "/projects/image.png",
+    description:
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe assumenda necessitatibus quaerat numquam facere sit dolorem, soluta eius suscipit ad.",
+    link: "/projects/image.png",
+  },
+];
+
+
 
 // [
 //   {
