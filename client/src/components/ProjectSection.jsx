@@ -116,7 +116,7 @@ const ProjectSection = () => {
         <div className="mt-12 text-center mx-auto group w-fit">
           <a
             className="cosmic-button flex items-center gap-2 hover:scale-none"
-            href="https://book-my-show-delta-one.vercel.app/"
+            href="https://github.com/ThowfiqNizaath"
             target="_blank"
           >
             Check My GitHub{" "}
