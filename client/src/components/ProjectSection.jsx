@@ -23,7 +23,7 @@ const ProjectSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group w-full max-w-[600px] border gradient-border flex-none md:h-90 rounded-2xl relative overflow-hidden snap-center"
+              className="group w-full max-w-[600px] gradient-border border-none flex-none md:h-90 rounded-2xl relative overflow-hidden snap-center"
             >
               <div className="w-full md:h-full bg-black/10 z-40">
                 <img
@@ -34,7 +34,7 @@ const ProjectSection = () => {
 
               {/* Mobile */}
               <div className="md:hidden flex flex-col justify-around gap-3 py-3 px-2 overflow-hidden">
-                <div className="flex flex-wrap gap-5">
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, index) => (
                     <p
                       key={index}
@@ -72,8 +72,8 @@ const ProjectSection = () => {
               </div>
 
               {/* Desktop */}
-              <div className="absolute p-5 flex flex-col justify-around gradient-border md:group-hover:inset-0 border-none transition-all duration-700 ">
-                <div className="flex gap-5">
+              <div className="max-sm:hidden absolute p-5 flex flex-col justify-around gradient-border  md:group-hover:inset-0 border-none transition-all duration-700 overflow-scroll scroll-none ">
+                <div className="flex gap-2 flex-wrap">
                   {project.tags.map((tag, index) => (
                     <p
                       key={index}
@@ -104,6 +104,7 @@ const ProjectSection = () => {
                     href={project.githubUrl}
                     title="Sorce Code"
                     className="text-foreground/80 hover:text-primary transition-colors duration-300 text-2xl"
+                    target="_blank"
                   >
                     <FaGithub />
                   </a>

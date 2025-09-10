@@ -23,42 +23,42 @@ const CertificateSection = () => {
               <div className="w-full md:h-full bg-black/10 z-40">
                 <img
                   src={certificate.image}
-                  className="w-full h-auto md:h-full object-cover"
+                  className="w-full h-50 md:h-full object-cover"
                 />
               </div>
 
               {/* Mobile */}
-              <div className="md:hidden flex flex-col justify-around gap-3 py-5 px-2 overflow-hidden">
-                <h2 className="text-2xl pb-2 font-semibold">
+              <div className="md:hidden flex flex-col justify-around gap-2 py-5 px-2 overflow-hidden ml-5">
+                <h2 className="text-xl sm:text-2xl pb-2 font-semibold">
                   {certificate.title}
                 </h2>
-                <div className="text-left ml-5">
+                <div className="text-left">
                   Type:{" "}
                   <span className="font-semibold text-lg ml-2">
                     {certificate.type.toUpperCase()}
                   </span>
                 </div>
-                <div className="ml-5 text-left">
+                <div className="text-left">
                   Provided By:{" "}
                   <span className="font-semibold text-lg ml-2">
                     {certificate.by}
                   </span>
                 </div>
-                <div className="ml-5 text-left">
+                <div className=" text-left">
                   Platform:{" "}
                   <span className="font-semibold text-lg ml-2">
                     {certificate.platform}
                   </span>
                 </div>
-                <p className="my-2 text-sm">{certificate.description}</p>
+                <p className="my-2 text-sm hidden sm:block">{certificate.description}</p>
 
-                <a herf="#" target="_blank" className="cosmic-button">
+                <a href={certificate.link} target="_blank" className="cosmic-button mt-5">
                   View Certificate
                 </a>
               </div>
 
               {/* Desktop */}
-              <div className="absolute gradient-border border-none py-5 px-10 flex flex-col md:group-hover:inset-0 overflow-hidden transition-all duration-300">
+              <div className="max-md:hidden absolute gradient-border border-none py-5 px-10 flex flex-col md:group-hover:inset-0 overflow-hidden transition-all duration-300">
                 <h2 className="text-2xl font-semibold pb-2">
                   {certificate.title}
                 </h2>
@@ -83,7 +83,7 @@ const CertificateSection = () => {
                 <p className="my-5 text-sm">{certificate.description}</p>
 
                 <a
-                  herf="#"
+                  href={certificate.link}
                   target="_blank"
                   className="cosmic-button mt-5 cursor-pointer"
                 >
