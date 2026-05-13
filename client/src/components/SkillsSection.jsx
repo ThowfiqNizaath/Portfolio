@@ -23,9 +23,9 @@ const SkillsSection = () => {
           My <span className="text-primary">Skills</span>
         </h2>
 
-        <div className="border border-primary mb-12 bg-primary/80">
+        <div className="border-primary mb-12 bg-primary rounded">
           <select
-            className="block ring-0 py-2 px-4 border-none w-full text-white"
+            className="block ring-0 py-2 px-4 border-none w-full text-white cursor-pointer"
             onChange={(e) => setCategory(e.target.value)}
           >
             {categories.map((cat, index) => (

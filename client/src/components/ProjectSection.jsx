@@ -19,7 +19,7 @@ const ProjectSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="flex flex-nowrap gap-8  overflow-x-scroll snap-x scroll-none w-full p-2">
+        <div className="flex flex-nowrap gap-8  overflow-x-auto snap-x w-full p-2 pb-10 custom-scrollbar">
           {projects.map((project, key) => (
             <div
               key={key}

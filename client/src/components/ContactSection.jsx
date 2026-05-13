@@ -51,7 +51,7 @@ const ContactSection = () => {
           opportunities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 ">
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
@@ -98,7 +98,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4 items-center mt-10">
+              <div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-col gap-4 items-center z-50">
                 <a
                   href="www.linkedin.com/in/thowfiq-nizaath-79b2b4284"
                   target="_blank"
@@ -107,17 +107,17 @@ const ContactSection = () => {
                   <Linkedin />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/ThowfiqNizaath"
                   className="p-3 rounded-full bg-primary/50 text-white hover:bg-primary"
                 >
                   <Github />
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="p-3 rounded-full bg-primary/50 text-white hover:bg-primary"
                 >
                   <Instagram />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer"
+                  "cosmic-button w-full flex items-center justify-center gap-2 cursor-pointer",
                 )}
               >
                 Send Message

@@ -174,7 +174,7 @@ export const projects = [
       "WebHooks",
     ],
     demoUrl: "https://book-my-show-delta-one.vercel.app/",
-    githubUrl: "#https://github.com/ThowfiqNizaath/Book_My_Show",
+    githubUrl: "https://github.com/ThowfiqNizaath/Book_My_Show",
   },
 ];
 

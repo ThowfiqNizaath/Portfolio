@@ -14,7 +14,7 @@ const CertificateSection = () => {
           in my field.
         </p>
 
-        <div className="flex flex-nowrap gap-8  overflow-x-scroll snap-x scroll-none w-full p-2">
+        <div className="flex flex-nowrap gap-8  overflow-x-scroll snap-x custom-scrollbar w-full p-2 pb-10">
           {certificates.map((certificate, index) => (
             <div
               key={index}
