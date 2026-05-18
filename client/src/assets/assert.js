@@ -8,6 +8,9 @@ import {
   SiMongodb,
   SiMongoose,
   SiGit,
+  SiPython,
+  SiDjango,
+  SiMysql,
 } from "react-icons/si";
 import { IoFlowerOutline } from "react-icons/io5";
 import { TbBrandNodejs } from "react-icons/tb";
@@ -16,6 +19,27 @@ import { FaFigma } from "react-icons/fa";
 import { MdMobileFriendly } from "react-icons/md";
 
 export const skills = [
+  {
+    name: "Python",
+    level: 80,
+    category: "backend",
+    icon: SiPython,
+    iconColor: "text-yellow-400", // HTML5 orange
+  },
+  {
+    name: "Django",
+    level: 80,
+    category: "backend",
+    icon: SiDjango,
+    iconColor: "text-green-600", // HTML5 orange
+  },
+  {
+    name: "MySQL",
+    level: 80,
+    category: "backend",
+    icon: SiMysql,
+    iconColor: "text-blue-600", // HTML5 orange
+  },
   {
     name: "HTML",
     level: 80,
@@ -125,17 +149,37 @@ export const skills = [
   },
 ];
 
-
-export const categories = [
-    "all",
-    "frontend",
-    "backend",
-    "tools"
-]
+export const categories = ["all", "frontend", "backend", "tools"];
 
 export const projects = [
   {
-    id: 1,
+    id: 3,
+    title: "Strivio",
+    description:
+      "Developed a full-stack routine and habit tracking web application with React, Django REST Framework, and PostgreSQL, featuring JWT cookie authentication, progress analytics dashboards, scheduled routines, PWA support, rich text notes, and a responsive modern UI for seamless cross-device usage.",
+    image: "/projects/Dashboard.png",
+    tags: [
+      "React",
+      "Vite",
+      "TailwindCss",
+      "Django",
+      "Django REST Framework",
+      "PostgreSQL",
+      "JWT Authentication",
+      "Axios",
+      "Recharts",
+      "Material UI",
+      "TipTap",
+      "PWA",
+      "WhiteNoise",
+      "CORS",
+      "Responsive Design",
+    ],
+    demoUrl: "https://strivio-frontend-app.vercel.app",
+    githubUrl: "https://github.com/ThowfiqNizaath/StrivioApp",
+  },
+  {
+    id: 2,
     title: "Food Delivery App",
     description:
       "Developed a full-stack food delivery platform with React 18, Node.js, Express, and MongoDB, featuring a secure JWT authentication system, Stripe payment integration, and a responsive UI with Material UI for smooth cross-device performance.",
@@ -157,7 +201,7 @@ export const projects = [
     githubUrl: "https://github.com/ThowfiqNizaath/Food_Delivery_App",
   },
   {
-    id: 2,
+    id: 3,
     title: "QuickShow - Show Booking Application",
     description:
       "Developed a full-stack ticket booking platform with React, TailwindCSS, Express, and MongoDB, featuring Clerk authentication, Stripe payments, and Nodemailer notifications, with Inngest workflows and Mongoose data modeling for secure and seamless user experiences.",
@@ -177,7 +221,6 @@ export const projects = [
     githubUrl: "https://github.com/ThowfiqNizaath/Book_My_Show",
   },
 ];
-
 
 export const certificates = [
   {
@@ -236,8 +279,6 @@ export const certificates = [
     link: "https://drive.google.com/file/d/1ZDQcnJ-48V4pqWv12niJvIgw1WDAiZoC/view?usp=sharing",
   },
 ];
-
-
 
 // [
 //   {
