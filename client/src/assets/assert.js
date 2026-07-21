@@ -11,6 +11,7 @@ import {
   SiPython,
   SiDjango,
   SiMysql,
+  SiTypescript
 } from "react-icons/si";
 import { IoFlowerOutline } from "react-icons/io5";
 import { TbBrandNodejs } from "react-icons/tb";
@@ -60,6 +61,13 @@ export const skills = [
     category: "frontend",
     icon: SiJavascript,
     iconColor: "text-yellow-400", // JS yellow
+  },
+  {
+    name: "TypeScript",
+    level: 80,
+    category: "frontend",
+    icon: SiTypescript,
+    iconColor: "text-blue-600",
   },
   {
     name: "ReactJS",

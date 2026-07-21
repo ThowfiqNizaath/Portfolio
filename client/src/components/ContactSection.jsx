@@ -100,7 +100,7 @@ const ContactSection = () => {
 
               <div className="absolute top-1/2 right-4 -translate-y-1/2 flex flex-col gap-4 items-center z-50">
                 <a
-                  href="www.linkedin.com/in/thowfiq-nizaath-79b2b4284"
+                  href="https://www.linkedin.com/in/thowfiq-nizaath-79b2b4284/"
                   target="_blank"
                   className="p-3 rounded-full bg-primary/50 hover:bg-primary cursor-pointer text-white"
                 >

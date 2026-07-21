@@ -31,7 +31,7 @@ const AboutSection = () => {
                 Get In Touch
               </a>
               <a
-                href="https://drive.google.com/file/d/1aqbZiPZR5FrQ7p0sXEOMQ0PQ_zHMOsXb/view?usp=sharing"
+                href="https://drive.google.com/file/d/1xZPYEY_dgczX07aX5LZhRJUoQ2txpxRH/view?usp=sharing"
                 target="_blank"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 hover:text-primary hover:scale-98"
               >
