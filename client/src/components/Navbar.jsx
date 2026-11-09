@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { cn } from '../lib/utils'
 import {Menu, Moon, Sun, X} from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
-import { userAppContext } from '../context/AppContext'
+import { useAppContext } from '../context/AppContext'
 
 const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-    const { isDarkMode, toggleTheme } = userAppContext();
+    const { isDarkMode, toggleTheme } = useAppContext();
 
     // useEffect(() => {
     //     const handleScroll = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
         {name: "Home", href: "#hero"},
         {name: "About", href: "#about"},
         {name: "Skills", href: "#skills"},
-        // {name: "Certificates", href: "#certificates"},
+        {name: "Certificates", href: "#certificates"},
         {name: "Projects", href: "#projects"},
         {name: "Contact", href: "#contact"},
     ]

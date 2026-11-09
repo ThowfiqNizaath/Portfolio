@@ -19,12 +19,12 @@
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-  --animate-meteor: meteor 5s linear infinite;
+  --animate-meteor: meteor 8s linear infinite both;
 
   @keyframes float {
     0%,
     50% {
-      transfrom: translateY(-10px);
+      transform: translateY(-10px);
     }
     100% {
       transform: translateY(0);
@@ -55,13 +55,20 @@
   @keyframes meteor {
     0% {
       transform: rotate(215deg) translateX(0);
+      opacity: 0;
+    }
+    2% {
       opacity: 1;
     }
-    70% {
+    20% {
       opacity: 1;
+    }
+    25% {
+      transform: rotate(215deg) translateX(-700px);
+      opacity: 0;
     }
     100% {
-      transform: rotate(215deg) translate(-500px);
+      transform: rotate(215deg) translateX(-700px);
       opacity: 0;
     }
   }
@@ -73,7 +80,7 @@
     --foreground: 222 47% 11%;
     --muted-foreground: 0 0% 15%;
 
-    --header-background: 0, 0%, 100%;
+    --header-background: 0 0% 100%;
     --card: 0 0% 100%;
 
     --primary: 250 47% 60%;
@@ -85,13 +92,13 @@
   .dark {
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
-    --header-background: 0, 0%, 0%;
+    --header-background: 0 0% 0%;
     --muted-foreground: 0 0% 77.4%;
 
     --card: 222 47% 8%;
 
     --primary: 250 65% 65%;
-    --primaryw-foreground: 213 31% 91%;
+    --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
   }
@@ -168,8 +175,9 @@
 }
 
 @utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full opacity-0 pointer-events-none;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  animation-fill-mode: both;
 }
 
 #root {

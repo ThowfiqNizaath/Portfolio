@@ -1,53 +1,62 @@
-import React, { useEffect, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { categories, skills } from '../assets/assert.js'
-import { cn } from '../lib/utils.js';
 
 const SkillsSection = () => {
-    const [category, setCategory] = useState("all")
-    const [filterSkills, setFilterSkills] = useState(skills)
-    const selectedCategorySkills = async() => {
-        const filteredSkills = skills.filter(skill => skill.category === category || category === "all")
-        setFilterSkills(filteredSkills)
-    }
+  const [category, setCategory] = useState("all")
 
-    useEffect(() => {
-        selectedCategorySkills()
-    },[category])
+  const filterSkills = useMemo(() => {
+    return skills.filter(skill => category === "all" || skill.category === category)
+  }, [category])
+
   return (
     <section
       id="skills"
-      className="py-24 px-1 relative bg-secendary/30 snap-center"
+      className="py-24 px-4 relative bg-secondary/30 snap-center"
     >
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary">Skills</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+          Technical <span className="text-primary">Skills</span>
         </h2>
+        <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+          Comprehensive stack across MERN web development, Freshworks platform APIs (FDK), serverless architecture, databases, and secure authentication.
+        </p>
 
-        <div className="border-primary mb-12 bg-primary rounded">
-          <select
-            className="block ring-0 py-2 px-4 border-none w-full text-white cursor-pointer"
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            {categories.map((cat, index) => (
-              <option key={index} className="text-black" value={cat}>
-                {cat.toUpperCase()}
-              </option>
-            ))}
-          </select>
+        {/* Category Filter Pills */}
+        <div className="flex flex-wrap gap-2 justify-center mb-12">
+          {categories.map((cat, index) => {
+            const isActive = category === cat;
+            return (
+              <button
+                key={index}
+                onClick={() => setCategory(cat)}
+                className={`px-5 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 cursor-pointer capitalize ${
+                  isActive
+                    ? "bg-primary text-primary-foreground shadow-[0_0_12px_rgba(139,92,246,0.5)] scale-105"
+                    : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
+                }`}
+              >
+                {cat}
+              </button>
+            );
+          })}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
           {filterSkills.map((skill, index) => (
             <div
               key={index}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-5 rounded-xl border border-border/60 card-hover text-left flex flex-col justify-between"
             >
-              <div className="flex justify-between items-center">
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
+              <div className="flex justify-between items-start mb-3">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-primary/10 text-primary capitalize">
+                  {skill.category}
+                </span>
                 {skill.icon && (
-                  <skill.icon className={`w-10 h-10 ${skill.iconColor}`} />
+                  <skill.icon className={`w-7 h-7 md:w-8 md:h-8 ${skill.iconColor}`} />
                 )}
               </div>
+              <h3 className="font-semibold text-sm md:text-base text-foreground">{skill.name}</h3>
             </div>
           ))}
         </div>

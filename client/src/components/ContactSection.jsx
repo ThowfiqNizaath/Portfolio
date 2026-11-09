@@ -1,11 +1,11 @@
-import { Github, Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import React, { useState } from "react";
 import { cn } from "../lib/utils";
 import toast from "react-hot-toast";
 
 
 const ContactSection = () => {
-  const [status, setStatus] = useState("");
+
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [message, setMessage] = useState("")
@@ -102,12 +102,15 @@ const ContactSection = () => {
                 <a
                   href="https://www.linkedin.com/in/thowfiq-nizaath-79b2b4284/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 rounded-full bg-primary/50 hover:bg-primary cursor-pointer text-white"
                 >
                   <Linkedin />
                 </a>
                 <a
                   href="https://github.com/ThowfiqNizaath"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 rounded-full bg-primary/50 text-white hover:bg-primary"
                 >
                   <Github />
