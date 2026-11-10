@@ -32,7 +32,7 @@ const SkillsSection = () => {
                 className={`px-5 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 cursor-pointer capitalize ${
                   isActive
                     ? "bg-primary text-primary-foreground shadow-[0_0_12px_rgba(139,92,246,0.5)] scale-105"
-                    : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/50"
+                    : "bg-white border border-border/80 text-foreground hover:border-primary/50 dark:bg-card dark:text-muted-foreground shadow-xs"
                 }`}
               >
                 {cat}
@@ -46,10 +46,10 @@ const SkillsSection = () => {
           {filterSkills.map((skill, index) => (
             <div
               key={index}
-              className="bg-card p-5 rounded-xl border border-border/60 card-hover text-left flex flex-col justify-between"
+              className="bg-white dark:bg-card p-5 rounded-xl border border-primary/40 dark:border-primary/40 shadow-[0_4px_16px_rgba(139,92,246,0.10)] dark:shadow-[0_4px_16px_rgba(139,92,246,0.15)] hover:border-primary hover:shadow-[0_8px_24px_rgba(139,92,246,0.20)] hover:-translate-y-0.5 transition-all duration-300 text-left flex flex-col justify-between"
             >
               <div className="flex justify-between items-start mb-3">
-                <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-primary/10 text-primary capitalize">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-white text-primary border border-primary/30 dark:bg-primary/10 capitalize shadow-xs">
                   {skill.category}
                 </span>
                 {skill.icon && (

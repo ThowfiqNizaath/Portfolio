@@ -20,7 +20,7 @@ const HeroSection = () => {
           </h1>
 
           <div className="opacity-0 animate-fade-in-delay-2">
-            <span className="inline-block px-4 py-1.5 rounded-full border border-primary/50 bg-primary/10 text-primary text-sm md:text-base font-medium">
+            <span className="inline-block px-4 py-1.5 rounded-full border border-primary/50 bg-white text-primary dark:bg-primary/10 text-sm md:text-base font-medium shadow-xs">
               Junior MERN Full Stack Developer | Freshworks App Developer
             </span>
           </div>

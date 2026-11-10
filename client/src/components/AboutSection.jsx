@@ -53,7 +53,7 @@ const AboutSection = () => {
             {experiences.map((exp, idx) => (
               <div
                 key={idx}
-                className="gradient-border p-6 md:p-8 text-left rounded-2xl bg-card border border-border/60 hover:border-primary/50 transition-all duration-300"
+                className="p-6 md:p-8 text-left rounded-2xl bg-white dark:bg-card border border-border/70 dark:border-border/60 hover:border-primary/50 shadow-sm transition-all duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-border/50">
                   <div className="flex items-center gap-4">
@@ -74,7 +74,7 @@ const AboutSection = () => {
                     </div>
                   </div>
                   <div className="text-xs md:text-sm text-muted-foreground flex flex-wrap md:flex-col md:items-end gap-2">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-primary border border-primary/40 dark:bg-primary/10 dark:border-transparent font-medium shadow-xs">
                       <Calendar size={14} />
                       {exp.period}
                     </span>
@@ -109,10 +109,10 @@ const AboutSection = () => {
             {education.map((edu, idx) => (
               <div
                 key={idx}
-                className="gradient-border p-6 rounded-2xl bg-card border border-border/60 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white dark:bg-card border border-border/70 dark:border-border/60 hover:border-primary/50 shadow-sm transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-3">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white text-primary border border-primary/40 dark:bg-primary/10 dark:border-transparent mb-3 shadow-xs">
                     {edu.period}
                   </span>
                   <h4 className="text-lg font-bold text-foreground mb-1">{edu.degree}</h4>
